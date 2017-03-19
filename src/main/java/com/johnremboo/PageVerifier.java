@@ -36,7 +36,7 @@ public class PageVerifier {
     }
 
     private boolean isCorrectHtml(String page) {
-        Pattern pattern = Pattern.compile("<!doctype html.*<html>.*<head>.*</head>.*<body>.*</body>.*</html>");
+        Pattern pattern = Pattern.compile("<![Dd][Oo][Cc][Tt][Yy][Pp][Ee] html.*>.*<html.*>.*<head>.*</head>.*<body.*>.*</body>.*</html>.*");
         return pattern.matcher(page).matches();
     }
 
